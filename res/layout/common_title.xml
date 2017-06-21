@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_action"
+    style="@style/style_action_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/size_dip_45" >
+
+    <ImageButton
+        android:id="@+id/action_back"
+        android:layout_width="@dimen/size_dip_45"
+        android:layout_height="match_parent"
+        android:background="@drawable/mine_btn_back"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/size_dip_20" />
+
+    <TextView
+        android:id="@+id/action_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="start"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/action_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:padding="@dimen/size_dip_10"
+        android:textColor="@drawable/add_address_color_selector"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/action_fav"
+        android:layout_width="@dimen/size_dip_25"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/size_dip_10"
+        android:contentDescription="@string/app_name"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/action_share"
+        android:layout_width="@dimen/size_dip_25"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/size_dip_20"
+        android:layout_toLeftOf="@id/action_fav"
+        android:contentDescription="@string/app_name"
+        android:visibility="gone" />
+
+</RelativeLayout>

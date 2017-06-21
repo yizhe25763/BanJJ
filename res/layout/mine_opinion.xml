@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eaeaea"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <include layout="@layout/loading" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/memo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_dip_10"
+            android:layout_marginRight="@dimen/size_dip_10"
+            android:layout_marginTop="@dimen/size_dip_15"
+            android:background="@color/white"
+            android:gravity="top"
+            android:hint="请输入文字"
+            android:lines="15"
+            android:maxLength="200"
+            android:padding="@dimen/size_dip_10" />
+
+        <TextView
+            android:id="@+id/order_num_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/memo"
+            android:layout_alignRight="@+id/memo"
+            android:paddingBottom="5dp"
+            android:paddingRight="15dp"
+            android:text="300字"
+            android:textColor="#ff7373" />
+    </RelativeLayout>
+
+</LinearLayout>

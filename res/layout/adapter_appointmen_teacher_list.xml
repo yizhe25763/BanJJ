@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp" >
+
+    <!-- 左侧 -->
+
+    <RelativeLayout
+        android:id="@+id/left_content"
+        android:layout_width="80dp"
+        android:layout_height="150dp"
+        android:background="#ff7775" >
+
+        <!-- 日期 -->
+
+        <TextView
+            android:id="@+id/apponiment_date"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <!-- 周几 -->
+
+        <TextView
+            android:id="@+id/apponiment_week"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apponiment_date"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="21sp" />
+        <!-- 时间点 -->
+
+        <TextView
+            android:id="@+id/apponiment_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apponiment_week"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+        <!-- 几小时 -->
+
+        <RelativeLayout
+            android:id="@+id/apponiment_hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apponiment_time"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/teacher_hour" >
+
+            <TextView
+                android:id="@+id/appoinment_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <!-- 小时单位 -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/appoinment_hour"
+                android:layout_centerHorizontal="true"
+                android:text="小时"
+                android:textColor="@color/white"
+                android:textSize="9sp" />
+        </RelativeLayout>
+
+        <!-- 单价 -->
+
+        <TextView
+            android:id="@+id/apponiment_price"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apponiment_hour_layout"
+            android:layout_marginTop="2dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <!-- 右侧 -->
+
+    <RelativeLayout
+        android:id="@+id/right_content"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_toRightOf="@id/left_content"
+        android:background="@color/white" >
+
+        <!-- 无老师信息提示 -->
+
+        <TextView
+            android:id="@+id/no_message_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:text="no message" />
+
+        <!-- 头像 -->
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_launcher"
+            android:visibility="invisible" />
+
+        <!-- 姓名 -->
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/user_image"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/user_image"
+            android:text="老师姓名"
+            android:textColor="#2e2e2e"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+        <!-- 星级 -->
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            style="@style/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/user_name"
+            android:layout_alignTop="@id/user_name"
+            android:layout_marginLeft="@dimen/size_dip_5"
+            android:layout_toRightOf="@id/user_name"
+            android:numStars="5"
+            android:onClick="false"
+            android:paddingTop="@dimen/size_dip_10"
+            android:rating="3"
+            android:stepSize="0.1"
+            android:visibility="invisible" />
+
+        <!-- 接单数 -->
+
+        <TextView
+            android:id="@+id/appointment_num"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/user_name"
+            android:layout_below="@id/user_name"
+            android:layout_marginTop="5dp"
+            android:text="接单：238"
+            android:textColor="#585858"
+            android:visibility="invisible" />
+        <!-- 擅长 -->
+
+        <TextView
+            android:id="@+id/appointment_good"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/user_image"
+            android:layout_alignLeft="@id/user_name"
+            android:layout_below="@id/appointment_num"
+            android:layout_marginTop="5dp"
+            android:text="擅长：数学、体育"
+            android:textColor="#585858"
+            android:visibility="invisible" />
+
+        <!-- 分割线 -->
+
+        <View
+            android:id="@+id/image_line"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/size_dip_1"
+            android:layout_below="@id/user_image"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/mine_line" />
+        <!-- 添加要求 -->
+
+        <TextView
+            android:id="@+id/appointment_add_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/user_image"
+            android:layout_below="@id/image_line"
+            android:layout_marginTop="8dp"
+            android:text="添加要求"
+            android:textColor="#8a8989"
+            android:visibility="invisible" />
+
+        <!-- 更换老师 -->
+
+        <TextView
+            android:id="@+id/appointment_channel_teacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/appointment_add_request"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="更换老师"
+            android:textColor="#ff7775" />
+    </RelativeLayout>
+    <!-- 服务要求 -->
+
+    <TextView
+        android:id="@+id/service_requirements"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/left_content"
+        android:background="#f9f9f9"
+        android:ellipsize="end"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:singleLine="true"
+        android:text="服务要求"
+        android:textColor="#8a8989"
+        android:visibility="gone" />
+
+</RelativeLayout>

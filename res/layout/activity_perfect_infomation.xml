@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_colors" >
+
+    <!-- title -->
+
+    <include
+        android:id="@+id/login_title"
+        layout="@layout/common_title" />
+    <!-- information title -->
+
+    <TextView
+        android:id="@+id/information_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_title"
+        android:text="@string/your_information_title" />
+    <!-- your name -->
+
+    <TextView
+        android:id="@+id/your_name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/information_title"
+        android:layout_below="@id/information_title"
+        android:text="@string/your_information_name" />
+
+    <EditText
+        android:id="@+id/your_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/your_name_title"
+        android:layout_alignTop="@id/your_name_title"
+        android:layout_toRightOf="@id/your_name_title"
+        android:hint="@string/your_information_name_hint" />
+
+    <!-- ID Card -->
+
+    <TextView
+        android:id="@+id/id_card_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/information_title"
+        android:layout_below="@id/your_name_title"
+        android:text="@string/your_information_idcard" />
+
+    <EditText
+        android:id="@+id/id_card"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_card_title"
+        android:layout_alignTop="@id/id_card_title"
+        android:layout_toRightOf="@id/id_card_title"
+        android:hint="@string/your_information_idcard_hint" />
+    <!-- Babay information title -->
+
+    <TextView
+        android:id="@+id/baby_information_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/information_title"
+        android:layout_below="@id/id_card_title"
+        android:text="@string/baby_information_title" />
+    <!-- baby name -->
+
+    <TextView
+        android:id="@+id/baby_name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/information_title"
+        android:layout_below="@id/baby_information_title"
+        android:text="@string/your_information_name" />
+
+    <EditText
+        android:id="@+id/baby_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/baby_name_title"
+        android:layout_alignTop="@id/baby_name_title"
+        android:layout_toRightOf="@id/baby_name_title"
+        android:hint="@string/your_information_name_hint" />
+    <!-- birthday -->
+
+    <TextView
+        android:id="@+id/baby_birthday_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/information_title"
+        android:layout_below="@id/baby_name"
+        android:text="@string/your_information_birthday" />
+
+    <EditText
+        android:id="@+id/baby_birthday"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/baby_birthday_title"
+        android:layout_alignTop="@id/baby_birthday_title"
+        android:layout_toRightOf="@id/baby_birthday_title" />
+    <!-- gender -->
+
+    <TextView
+        android:id="@+id/baby_gender_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/information_title"
+        android:layout_below="@id/baby_birthday_title"
+        android:text="@string/your_information_sex" />
+
+    <RadioGroup
+        android:id="@+id/baby_gender"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/baby_gender_title"
+        android:layout_alignTop="@id/baby_gender_title"
+        android:layout_toRightOf="@id/baby_gender_title"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/famale_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:text="公主" />
+
+        <RadioButton
+            android:id="@+id/male_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/famale_btn"
+            android:background="@null"
+            android:text="王子" />
+    </RadioGroup>
+    <!-- ID Card -->
+
+    <TextView
+        android:id="@+id/baby_id_card_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/information_title"
+        android:layout_below="@id/baby_gender_title"
+        android:text="@string/your_information_idcard" />
+
+    <EditText
+        android:id="@+id/baby_id_card"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/baby_id_card_title"
+        android:layout_alignTop="@id/baby_id_card_title"
+        android:layout_toRightOf="@id/baby_id_card_title" />
+    <!-- hint -->
+
+    <TextView
+        android:id="@+id/bottom_hint"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/baby_id_card_title"
+        android:text="@string/bottom_hint" />
+
+</RelativeLayout>

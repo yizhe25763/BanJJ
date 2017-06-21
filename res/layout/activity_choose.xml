@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/order_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <ListView
+        android:id="@+id/address_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/line_img"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:scrollingCache="false" >
+    </ListView>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom_btn"
+        android:layout_below="@id/title"
+        android:scrollbars="none"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/order_background"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="#f7f7f7"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="常用地址:"
+                android:textColor="#777777"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_dip_1"
+                android:background="@drawable/mine_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_dip_1"
+                android:background="@drawable/mine_line" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="#f7f7f7"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="新增地址:"
+                android:textColor="#777777"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_dip_1"
+                android:background="@drawable/mine_line" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_dip_65"
+                android:background="@color/background_colors"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/add_address_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size_dip_25"
+                    android:layout_marginRight="@dimen/size_dip_25"
+                    android:background="@drawable/add_address_btn" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

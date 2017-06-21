@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/order_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <include layout="@layout/loading" />
+
+    <include
+        android:id="@+id/no_message"
+        layout="@layout/no_meaage"
+        android:visibility="gone" />
+
+    <com.shzy.bjj.view.CustomListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/line_img"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:scrollingCache="false" />
+
+</LinearLayout>

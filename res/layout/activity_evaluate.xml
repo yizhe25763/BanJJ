@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <!-- android:background="@color/order_background" -->
+
+    <include layout="@layout/common_title" />
+
+    <include layout="@layout/loading" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <!-- 综合评分 -->
+
+            <TableRow
+                android:id="@+id/order_address"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_dip_55"
+                android:background="@android:color/white"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    style="@style/text_mine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_dip_15"
+                    android:layout_weight="2"
+                    android:text="综合评分："
+                    android:textColor="#777777" />
+
+                <RatingBar
+                    android:id="@+id/comprehensive_score"
+                    style="@style/evaluate_ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_dip_31"
+                    android:layout_marginBottom="@dimen/size_dip_5"
+                    android:layout_marginLeft="@dimen/size_dip_10"
+                    android:layout_marginRight="@dimen/size_dip_10"
+                    android:numStars="5"
+                    android:onClick="false"
+                    android:paddingTop="@dimen/size_dip_10"
+                    android:rating="5"
+                    android:stepSize="1" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_dip_1"
+                android:background="@drawable/mine_line" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/size_dip_20" >
+
+                <Button
+                    android:id="@+id/pic_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/size_dip_10"
+                    android:layout_marginTop="@dimen/size_dip_20"
+                    android:background="@drawable/pic_take_selector" />
+
+                <EditText
+                    android:id="@+id/note"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_100"
+                    android:layout_alignBottom="@id/pic_btn"
+                    android:layout_alignTop="@id/pic_btn"
+                    android:layout_marginLeft="@dimen/size_dip_10"
+                    android:layout_marginRight="@dimen/size_dip_10"
+                    android:layout_toLeftOf="@id/pic_btn"
+                    android:background="#e4e4e4"
+                    android:gravity="left|top"
+                    android:hint="请写下点感受吧，对他人帮助很大哦"
+                    android:maxLength="200"
+                    android:maxLines="6"
+                    android:minLines="5"
+                    android:padding="8dp"
+                    android:textColor="#b2b2b2"
+                    android:textColorHint="#b2b2b2"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/order_num_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/note"
+                    android:layout_alignRight="@+id/note"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="15dp"
+                    android:text="200字"
+                    android:textColor="#ff7373"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#eaeaea" >
+
+                <GridView
+                    android:id="@+id/noScrollgridview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginLeft="@dimen/size_dip_5"
+                    android:horizontalSpacing="3dp"
+                    android:numColumns="4"
+                    android:paddingBottom="@dimen/size_dip_15"
+                    android:paddingTop="@dimen/size_dip_15"
+                    android:scrollbars="none"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone" >
+                </GridView>
+            </LinearLayout>
+            <!-- 服务 -->
+
+            <TextView
+                style="@style/text_mine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_dip_10"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/size_dip_10"
+                android:paddingLeft="@dimen/size_dip_15"
+                android:paddingRight="@dimen/size_dip_15"
+                android:paddingTop="@dimen/size_dip_20"
+                android:text="给老师的专业评分"
+                android:textColor="#777777" />
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_dip_55"
+                android:background="@android:color/white"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    style="@style/text_mine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_dip_15"
+                    android:layout_weight="2"
+                    android:text="服务："
+                    android:textColor="#777777" />
+
+                <RatingBar
+                    android:id="@+id/service"
+                    style="@style/evaluate_ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_dip_31"
+                    android:layout_marginBottom="@dimen/size_dip_5"
+                    android:layout_marginLeft="@dimen/size_dip_10"
+                    android:layout_marginRight="@dimen/size_dip_10"
+                    android:numStars="5"
+                    android:onClick="false"
+                    android:paddingTop="@dimen/size_dip_10"
+                    android:rating="5"
+                    android:stepSize="1" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_dip_1"
+                android:background="@drawable/mine_line" />
+            <!-- 专业 -->
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_dip_55"
+                android:background="@android:color/white"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    style="@style/text_mine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_dip_15"
+                    android:layout_weight="2"
+                    android:text="专业："
+                    android:textColor="#777777" />
+
+                <RatingBar
+                    android:id="@+id/professional"
+                    style="@style/evaluate_ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_dip_31"
+                    android:layout_marginBottom="@dimen/size_dip_5"
+                    android:layout_marginLeft="@dimen/size_dip_10"
+                    android:layout_marginRight="@dimen/size_dip_10"
+                    android:numStars="5"
+                    android:onClick="false"
+                    android:paddingTop="@dimen/size_dip_10"
+                    android:rating="5"
+                    android:stepSize="1" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_dip_1"
+                android:background="@drawable/mine_line" />
+
+            <!-- 守时 -->
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_dip_55"
+                android:background="@android:color/white"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    style="@style/text_mine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_dip_15"
+                    android:layout_weight="2"
+                    android:text="守时："
+                    android:textColor="#777777" />
+
+                <RatingBar
+                    android:id="@+id/punctual"
+                    style="@style/evaluate_ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_dip_31"
+                    android:layout_marginBottom="@dimen/size_dip_5"
+                    android:layout_marginLeft="@dimen/size_dip_10"
+                    android:layout_marginRight="@dimen/size_dip_10"
+                    android:numStars="5"
+                    android:onClick="false"
+                    android:paddingTop="@dimen/size_dip_10"
+                    android:rating="5"
+                    android:stepSize="1" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_dip_1"
+                android:background="@drawable/mine_line" />
+            <!--
+            <TextView
+                style="@style/text_mine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_dip_15"
+                android:layout_marginRight="@dimen/size_dip_15"
+                android:layout_marginTop="@dimen/size_dip_10"
+                android:gravity="center_horizontal"
+                android:text="轻按星形来评分"
+                android:textColor="#777777"
+                android:textSize="12sp" />
+            -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/config_hidden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+</LinearLayout>

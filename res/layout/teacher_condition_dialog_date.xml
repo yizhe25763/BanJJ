@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <GridView
+            android:id="@+id/grideview_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:clipChildren="true"
+            android:drawSelectorOnTop="false"
+            android:fadingEdge="none"
+            android:gravity="center"
+            android:listSelector="@null"
+            android:numColumns="8"
+            android:scrollbars="none"
+            android:scrollingCache="false" />
+
+        <GridView
+            android:id="@+id/grideview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ebebeb"
+            android:clipChildren="true"
+            android:drawSelectorOnTop="false"
+            android:fadingEdge="none"
+            android:gravity="center"
+            android:listSelector="@null"
+            android:numColumns="8"
+            android:scrollbars="none"
+            android:scrollingCache="false" />
+
+        <RelativeLayout
+            android:id="@+id/clear_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/size_dip_55"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size_dip_15"
+            android:paddingRight="@dimen/size_dip_15" >
+
+            <TextView
+                android:id="@+id/cancel"
+                style="@style/text_order_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/size_dip_10"
+                android:text="@string/cancel"
+                android:textColor="#7a7a7a" />
+
+            <TextView
+                android:id="@+id/clear"
+                style="@style/text_order_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/size_dip_10"
+                android:text="@string/clear"
+                android:textColor="#ff6767" />
+
+            <TextView
+                android:id="@+id/ok"
+                style="@style/text_order_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/size_dip_10"
+                android:text="@string/ok"
+                android:textColor="#7a7a7a" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/size_dip_1"
+            android:background="#bbbbbb" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

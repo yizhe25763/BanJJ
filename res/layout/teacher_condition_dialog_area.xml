@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_condition_area"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/title_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray03"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="@dimen/size_dip_15" >
+
+                <TextView
+                    style="@style/text_order_item"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/size_dip_12"
+                    android:paddingTop="@dimen/size_dip_12"
+                    android:text="@string/nothing" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listview_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                android:scrollingCache="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/title_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                  android:visibility="gone"
+                android:paddingLeft="@dimen/size_dip_15" >
+
+                <TextView
+                    style="@style/text_order_item"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/size_dip_12"
+                    android:paddingTop="@dimen/size_dip_12"
+                    android:text="@string/nothing" 
+                    android:visibility="gone"/>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:visibility="gone"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listview_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                android:scrollingCache="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

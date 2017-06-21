@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">伴家家</string>
+
+    <!-- 服务端错误信息 -->
+    <string name="ERROR_ONE_VALUES">通用错误</string>
+    <string name="ERROR_TWO_VALUES">系统错误</string>
+    <string name="ERROR_THREE_VALUES">服务暂停</string>
+    <string name="ERROR_FOUR_VALUES">远程服务错误</string>
+    <string name="ERROR_FIVE_VALUES">不合法的用户</string>
+    <string name="ERROR_SIX_VALUES">缺少请求的必选参数</string>
+    <string name="ERROR_SEVEN_VALUES">请求参数错误</string>
+    <string name="ERROR_EIGHT_VALUES">请求方式错误</string>
+    <string name="ERROR_NINE_VALUES">接口认证错误</string>
+    <string name="ERROR_TEN_VALUES">接口请求超时</string>
+    <string name="ERROR_EVEVEN_VALUES">参数格式错误或者不规范</string>
+    <string name="ERROR_TWELVE_VALUES">账号已经被注册</string>
+    <string name="ERROR_THIRTEEN_VALUES">认证失败,账号不存在</string>
+    <string name="ERROR_FOURTEEN_VALUES">认证失败,账号被封</string>
+    <string name="ERROR_FIFTEEN_VALUES">该功能需要登录后才能访问</string>
+    <string name="ERROR_SIXTEEN_VALUES">找回密码失败,账号不存在</string>
+    <string name="ERROR_SEVENTEEN_VALUES">昵称重复</string>
+    <string name="ERROR_EIGHTEEN_VALUES">用户输入不符合规范</string>
+    <string name="ERROR_NINETEEN_VALUES">需要付费才能访问</string>
+    <string name="ERROR_TWENTY_VALUES">付费失败,账号余额不足</string>
+    <string name="ERROR_TWENTY_ONE_VALUES">请求的信息不存在</string>
+    <string name="ERROR_TWENTY_TWO_VALUES">状态为已下架</string>
+    <string name="ERROR_TWENTY_THREE_VALUES">验证码错误</string>
+    <string name="ERROR_TWENTY_FOUR_VALUES">支付检验失败,订单不存在</string>
+    <string name="ERROR_TWENTY_FIVE_VALUES">支付校验失败,收据不合法</string>
+    <string name="ERROR_TWENTY_SIX_VALUES">邀请码错误</string>
+    <string name="ERROR_TWENTY_SEVEN_VALUES">请不要重复􏰀交请求</string>
+    <string name="ERROR_TWENTY_EIGHT_VALUES">已经领取过奖励</string>
+
+    <!-- 登录 -->
+    <string name="login_title_content">登录账号</string>
+    <string name="login_first_hint">首次登录即为注册账户</string>
+    <string name="login_phone_hint">手机号</string>
+    <string name="login_checking_btn">验证</string>
+    <string name="login_auth_code_hint">验证码</string>
+    <string name="login_btn">完成</string>
+    <string name="phone_no">手机号码不能为空</string>
+    <string name="phone_lack">抱歉，您输入的手机号码不正确，请检查</string>
+    <string name="author_code_lack">抱歉，您输入的验证码不正确，请检查</string>
+    <string name="perfect_information_title">完善信息</string>
+    <string name="perfect_information_next">下一步</string>
+    <string name="your_information_title">你的信息:</string>
+    <string name="your_information_name">姓名</string>
+    <string name="your_information_idcard">身份证</string>
+    <string name="your_information_name_hint">请输入昵称</string>
+    <string name="your_information_idcard_hint">保险、保单用</string>
+    <string name="baby_information_title">宝宝信息:</string>
+    <string name="your_information_birthday">生日</string>
+    <string name="your_information_sex">性别</string>
+    <string name="bottom_hint">请补充个人资料，以方便快捷下单，您所填写的信息我们将不会透露给任何第三方作为他用</string>
+    <string name="error_network">网络连接不可用，请检查网络</string>
+
+    <!-- End -->
+    <!-- 首页 -->
+    <string name="home_title_content">伴家家</string>
+    <string name="home_order_time_title">预约上门</string>
+    <string name="home_order_address_title">地址</string>
+    <string name="home_order_baby_title">宝宝</string>
+    <string name="home_pay_address_title">地址:</string>
+    <string name="home_pay_baby_title">宝宝:</string>
+    <string name="home_order_teacher_title">自动匹配老师</string>
+    <string name="home_order_ok_btn">确定</string>
+    <string name="order_content">注意事项：
+       \n1.仅针对1-5岁宝宝。\n2.老师不承担看护人职责，请保证家里有其他看护人在场。\n3.请保管好您的贵重物品。\n4.老师经过专业培训并且通过我们的认证和持有健康证书。\n5.因上门老师多为女老师，请在家男士穿戴得体。</string>
+    <string name="home_order_address_hint">请填写详细地址:如楼栋门牌号等</string>
+    <string name="home_order_comment_btn">提交订单</string>
+    <string name="infimation_hint">请补充个人资料，以方便快捷下单 \n您所填写的信息我们将不会透露给任何第三方作为他用</string>
+    <!-- End -->
+    <!-- 教师 -->
+    <string name="teacher_title_content">教师列表</string>
+    <string name="teacher_title_select">选择老师</string>
+
+    <!-- End -->
+    <!-- 订单 -->
+    <string name="order_title_content">订单</string>
+    <!-- End -->
+    <!-- 我的 -->
+    <string name="mine_title_content">我的</string>
+    <!-- End -->
+    <string name="add_new_address">添加新地址</string>
+    <string name="pay_content_message">伴家家订单</string>
+    <string name="pay_loding">支付结果确认中</string>
+    <string name="pay_fail">支付失败</string>
+    <string name="check_user">检查结果为：</string>
+    <string name="appoinment_time_sale">可多选，系统会根据时间和老师自动拆分，同一位老师预约超过1小时享8折,老师需要准备教具,请提前24小时预约</string>
+    <string name="home_learns">暂未开通，敬请期待！</string>
+    <string name="phone_number">4009626199</string>
+    <string name="teacher_times_hint">可多选，连续时段超过一小时可享8折,老师需要准备教具,请提前24小时预约</string>
+    <string name="call_phone_title">拨打客服电话</string>
+    <string name="pay_sucess_title">付款成功</string>
+    <string name="pay_choose">感谢您的选择</string>
+    <string name="pay_hint">请保持电话通畅，方便老师联系您！</string>
+    <string name="pay_phone_hint">如有疑问，请拨打我们客服电话：</string>
+    <string name="pay_phone">4009-626-199</string>
+    <string name="sumbit_success_hint">订单提交成功</string>
+    <string name="sumbit_hint">请尽快付款，如果超过10分钟未付款</string>
+    <string name="submit_cannel_hint">则该订单将取消。您可以在“订单”页面</string>
+    <string name="submit_ooder">查询该订单。</string>
+    <string name="text_nums">200字</string>
+    <string name="user_input_hint">" 输入服务要求及备注"</string>
+    <string name="choose_address">请选择地址</string>
+    <string name="choose_baby">请选择宝宝</string>
+    <string name="choose_time">请选择时间</string>
+    <string name="city">西安市</string>
+    <string name="num_sizes">字</string>
+    <string name="b_02">B0002</string>
+    <string name="b_01">B0001</string>
+    <string name="no_time">暂无老师，请重新选择时间</string>
+    <string name="all_time_no">当前所选的时间无老师，请重新选择时间</string>
+    <string name="no_wechat">未安装微信，请选择其他支付方式</string>
+    <string name="no_pay">当前版本不支持支付功能</string>
+    <string name="moeny_unit">元</string>
+    <string name="dollor">￥</string>
+    <string name="no_user">未使用</string>
+    <string name="b_04">B0004</string>
+    <string name="mine_baby_message">宝宝信息管理</string>
+
+</resources>

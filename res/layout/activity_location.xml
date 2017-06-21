@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/order_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <include layout="@layout/loading" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#f7f7f7"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="GPS定位城市"
+        android:textColor="@color/black" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_dip_1"
+        android:background="@drawable/mine_line" />
+
+    <TextView
+        android:id="@+id/location_address"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_dip_1"
+        android:background="@drawable/mine_line" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#f7f7f7"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="已开通服务城市"
+        android:textColor="@color/black" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_dip_1"
+        android:background="@drawable/mine_line" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="西安市" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_dip_1"
+        android:background="@drawable/mine_line" />
+
+    <TextView
+        android:id="@+id/address_debug"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:paddingLeft="20dp"
+        android:text="上海市" />
+
+</LinearLayout>

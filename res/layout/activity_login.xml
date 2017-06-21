@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_colors" >
+
+    <!-- title -->
+
+    <include
+        android:id="@+id/login_title"
+        layout="@layout/common_title" />
+
+    <include
+        android:id="@+id/loading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_title"
+        layout="@layout/loading" />
+    <!-- first hint -->
+
+    <TextView
+        android:id="@+id/first_hint"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_title"
+        android:layout_marginTop="@dimen/size_dip_25"
+        android:gravity="center_horizontal"
+        android:text="@string/login_first_hint"
+        android:textColor="#b9b9b9"
+        android:textSize="18sp" />
+
+    <!-- Phone edittext -->
+
+    <EditText
+        android:id="@+id/phone_edt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_hint"
+        android:layout_marginLeft="@dimen/size_dip_28"
+        android:layout_marginRight="@dimen/size_dip_28"
+        android:layout_marginTop="@dimen/size_dip_20"
+        android:background="@drawable/edit_up"
+        android:hint="@string/login_phone_hint"
+        android:inputType="number"
+        android:maxLength="11"
+        android:paddingLeft="20dp" />
+    <!-- AuthCode  edittext -->
+
+    <com.shzy.bjj.view.TimeButton
+        android:id="@+id/send_btn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/phone_edt"
+        android:layout_marginLeft="@dimen/size_dip_8"
+        android:layout_marginRight="@dimen/size_dip_28"
+        android:layout_marginTop="@dimen/size_dip_10"
+        android:background="@drawable/send_message_down"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/auth_code_edt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/phone_edt"
+        android:layout_below="@id/phone_edt"
+        android:layout_marginTop="@dimen/size_dip_10"
+        android:layout_toLeftOf="@id/send_btn"
+        android:background="@drawable/edit_up"
+        android:hint="@string/login_auth_code_hint"
+        android:inputType="number"
+        android:maxLength="6"
+        android:paddingLeft="20dp" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/phone_edt"
+        android:layout_alignRight="@id/send_btn"
+        android:layout_below="@id/auth_code_edt"
+        android:layout_marginTop="@dimen/size_dip_10"
+        android:background="@drawable/login_selector"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/login_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/login_btn"
+        android:layout_below="@id/login_btn"
+        android:layout_marginTop="@dimen/size_dip_10"
+        android:text="点击登录，即表示同意" />
+
+    <TextView
+        android:id="@+id/login_services"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/login_hint"
+        android:layout_toRightOf="@id/login_hint"
+        android:text="《伴家家用户协议》"
+        android:textColor="@color/red" />
+
+</RelativeLayout>

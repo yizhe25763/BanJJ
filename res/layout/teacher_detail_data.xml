@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeaea"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/size_dip_25"
+            android:paddingLeft="@dimen/size_dip_10"
+            android:paddingRight="@dimen/size_dip_10"
+            android:paddingTop="@dimen/size_dip_15" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/teacher_item_bg"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/size_dip_15"
+                android:paddingTop="@dimen/size_dip_15" >
+
+                <TextView
+                    style="@style/text_order_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15"
+                    android:text="@string/teacher_detail_introduction"
+                    android:textColor="#2c2c2c" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:layout_marginTop="@dimen/size_dip_10"
+                    android:background="@drawable/dialog_line_h" />
+
+                <TextView
+                    android:id="@+id/teacher_detail_introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_dip_10"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15"
+                    android:textColor="@color/text_integral_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_dip_15"
+                android:background="@drawable/teacher_item_bg"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/size_dip_15"
+                android:paddingTop="@dimen/size_dip_15" >
+
+                <TextView
+                    style="@style/text_order_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15"
+                    android:text="@string/teacher_detail_certificate"
+                    android:textColor="#2c2c2c" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:layout_marginTop="@dimen/size_dip_10"
+                    android:background="@drawable/dialog_line_h" />
+
+                <com.shzy.bjj.view.MyGallery
+                    android:id="@+id/grideview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_dip_10"
+                    android:layout_marginTop="@dimen/size_dip_10"
+                    android:listSelector="#00ffffff"
+                    android:verticalSpacing="@dimen/size_dip_1" />
+
+                <!--
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:orientation="horizontal" >
+    
+                        <com.shzy.bjj.view.HorizontalGrideView
+                            android:id="@+id/grideview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:listSelector="#00ffffff"
+                            android:layout_marginTop="@dimen/size_dip_10"
+                            android:layout_marginLeft="@dimen/size_dip_10"
+                            android:verticalSpacing="@dimen/size_dip_1" >
+                        </com.shzy.bjj.view.HorizontalGrideView>
+
+                        
+                
+                        <Gallery
+                            android:id="@+id/grideview"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_dip_10"
+                            android:layout_marginTop="@dimen/size_dip_10"
+                            android:listSelector="#00ffffff"
+                            android:verticalSpacing="@dimen/size_dip_1" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+                -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_dip_15"
+                android:background="@drawable/teacher_item_bg"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/size_dip_15" >
+
+                <TextView
+                    style="@style/text_order_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15"
+                    android:text="@string/teacher_detail_education"
+                    android:textColor="#2c2c2c" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:layout_marginTop="@dimen/size_dip_10"
+                    android:background="@drawable/dialog_line_h" />
+
+                <com.shzy.bjj.view.CustomListView
+                    android:id="@+id/listview_resume"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_dip_15"
+                    android:divider="@null"
+                    android:drawSelectorOnTop="false"
+                    android:fadingEdge="none"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15"
+                    android:scrollbars="none"
+                    android:scrollingCache="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

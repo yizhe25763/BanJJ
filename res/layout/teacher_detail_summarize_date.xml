@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/size_dip_15"
+    android:layout_marginLeft="@dimen/size_dip_10"
+    android:layout_marginRight="@dimen/size_dip_10"
+    android:layout_marginTop="@dimen/size_dip_15"
+    android:background="@drawable/teacher_item_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_dip_45"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/size_dip_15"
+        android:paddingRight="@dimen/size_dip_15" >
+
+        <TextView
+            style="@style/text_order_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/teacher_detail_schedule" />
+
+        <TextView
+            style="@style/text_order_title"
+            android:layout_width="@dimen/size_dip_15"
+            android:layout_height="@dimen/size_dip_15"
+            android:background="@color/teacher_detail_appointment" />
+
+        <TextView
+            style="@style/text_order_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size_dip_5"
+            android:text="@string/teacher_detail_appointment" />
+
+        <TextView
+            style="@style/text_order_title"
+            android:layout_width="@dimen/size_dip_15"
+            android:layout_height="@dimen/size_dip_15"
+            android:layout_marginLeft="@dimen/size_dip_10"
+            android:background="@color/teacher_detail_free" />
+
+        <TextView
+            style="@style/text_order_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size_dip_5"
+            android:text="@string/teacher_detail_free" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/size_dip_15"
+        android:paddingRight="@dimen/size_dip_15" >
+
+        <LinearLayout
+            android:layout_width="@dimen/size_dip_30"
+            android:layout_height="@dimen/size_dip_25"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/teacher_detail_time"
+                android:contentDescription="@string/app_name" >
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <GridView
+                android:id="@+id/grideview_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_dip_5"
+                android:layout_marginRight="@dimen/size_dip_5"
+                android:background="@color/white"
+                android:clipChildren="true"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:gravity="center"
+                android:horizontalSpacing="@dimen/size_dip_1"
+                android:listSelector="@color/full_transparent"
+                android:numColumns="9"
+                android:scrollbars="none"
+                android:scrollingCache="false" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_dip_1"
+                android:background="@drawable/dialog_line_h" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.shzy.bjj.view.CustomListView
+        android:id="@+id/listview_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:paddingLeft="@dimen/size_dip_15"
+        android:paddingRight="@dimen/size_dip_15"
+        android:scrollbars="none"
+        android:scrollingCache="false" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_dip_5"
+        android:layout_marginTop="@dimen/size_dip_10"
+        android:paddingLeft="@dimen/size_dip_15"
+        android:paddingRight="@dimen/size_dip_15" >
+
+        <TextView
+            android:id="@+id/teacher_detail_all_time"
+            style="@style/text_order_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/teacher_detail_all_time" />
+
+        <ImageView
+            android:id="@+id/teacher_detail_all_time_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_dip_5"
+            android:layout_toRightOf="@id/teacher_detail_all_time"
+            android:background="@drawable/mine_pic_arrow_down"
+            android:contentDescription="@string/app_name" >
+        </ImageView>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/size_dip_10"
+        android:layout_marginRight="@dimen/size_dip_15"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/teacher_detail_education_cicle"
+            android:contentDescription="@string/app_name" />
+
+        <View
+            android:layout_width="@dimen/size_dip_2"
+            android:layout_height="fill_parent"
+            android:background="@drawable/dialog_line_v"
+            android:padding="-2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teacher_detail_schedule"
+            android:textColor="#4e4e4e"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_dip_12"
+            android:text="@string/teacher_detail_schedule"
+            android:textColor="#4e4e4e"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_dip_12"
+            android:paddingBottom="@dimen/size_dip_25"
+            android:text="@string/teacher_detail_schedule"
+            android:textColor="#a4a3a3"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

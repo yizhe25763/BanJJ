@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <include layout="@layout/loading" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_dip_20"
+                android:stretchColumns="1" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_45"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contact"
+                        android:textColor="@color/text_integral_color" />
+
+                    <EditText
+                        android:id="@+id/contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_dip_5"
+                        android:background="@null"
+                        android:maxLength="4"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_dip_25"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_marginRight="@dimen/size_dip_20"
+                        android:layout_marginTop="@dimen/size_dip_25"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_45"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mobile"
+                        android:textColor="@color/text_integral_color" />
+
+                    <EditText
+                        android:id="@+id/mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_dip_5"
+                        android:background="@null"
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:maxLength="11"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_dip_25"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_marginRight="@dimen/size_dip_20"
+                        android:layout_marginTop="@dimen/size_dip_25"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_45"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phone"
+                        android:textColor="@color/text_integral_color" />
+
+                    <EditText
+                        android:id="@+id/telphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_dip_5"
+                        android:background="@null"
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_dip_25"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_marginRight="@dimen/size_dip_20"
+                        android:layout_marginTop="@dimen/size_dip_25"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_45"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/address"
+                        android:textColor="@color/text_integral_color" />
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_dip_5"
+                        android:background="@null"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_dip_25"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_marginRight="@dimen/size_dip_20"
+                        android:layout_marginTop="@dimen/size_dip_25"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_45"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/address_info"
+                        android:textColor="@color/text_integral_color" />
+
+                    <EditText
+                        android:id="@+id/address_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_dip_5"
+                        android:background="@null"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_dip_25"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_marginRight="@dimen/size_dip_20"
+                        android:layout_marginTop="@dimen/size_dip_25"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_dip_20"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/delete"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_20"
+                        android:background="@drawable/login_btn"
+                        android:text="@string/delete"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChannelInfo>
+    <!--  渠道说明：
+          id：渠道唯一标识号
+          en：渠道英文名称
+          cn：渠道中文名称
+          enable：渠道是否可用
+      -->
+
+    <!-- 渠道配置（不同渠道打包时，请配置这个属性，默认渠道为官网） -->
+    <ChannelSet id="9000" en="Official Website" cn="官网" enable="true"/>
+
+    <!-- 渠道列表 -->
+    <!--
+    <Item id="9000"
+          en="Official Website"
+          cn="官网"
+          enable="true"/>
+
+    <Item id="9101"
+          en="App Store"
+          cn="苹果应用商城"
+          enable="true"/>
+
+    <Item id="9102"
+          en="Google Market"
+          cn="谷歌市场"
+          enable="true"/>
+
+    <Item id="9103"
+          en=""
+          cn="腾讯应用中心"
+          enable="true"/>
+
+    <Item id="9104"
+          en=""
+          cn="中国移动应用商场"
+          enable="true"/>
+
+    <Item id="9105"
+          en=""
+          cn="联通沃商店"
+          enable="true"/>
+
+    <Item id="9106"
+          en=""
+          cn="安卓市场 Himarket"
+          enable="true"/>
+
+    <Item id="9107"
+          en=""
+          cn="XDA 市场"
+          enable="true"/>
+
+    <Item id="9108"
+          en=""
+          cn="机锋市场"
+          enable="true"/>
+
+    <Item id="9109"
+          en=""
+          cn="历趣安卓市场"
+          enable="true"/>
+
+    <Item id="9110"
+          en=""
+          cn="木蚂蚁应用市场"
+          enable="true"/>
+
+    <Item id="9111"
+          en=""
+          cn="当乐网-地瓜游戏"
+          enable="true"/>
+
+    <Item id="9112"
+          en=""
+          cn="91 手机助手"
+          enable="true"/>
+
+    <Item id="9113"
+          en=""
+          cn="91 通行证"
+          enable="true"/>
+
+    <Item id="9114"
+          en=""
+          cn="机客网"
+          enable="true"/>
+
+    <Item id="9115"
+          en=""
+          cn="安智市场"
+          enable="true"/>
+
+    <Item id="9116"
+          en=""
+          cn="N 多市场"
+          enable="true"/>
+
+    <Item id="9117"
+          en=""
+          cn="摩托罗拉软件商店"
+          enable="true"/>
+
+    <Item id="9118"
+          en=""
+          cn="掌上应用汇"
+          enable="true"/>
+
+    <Item id="9119"
+          en=""
+          cn="安卓星空"
+          enable="true"/>
+
+    <Item id="9120"
+          en=""
+          cn="华为智汇云"
+          enable="true"/>
+
+    <Item id="9121"
+          en=""
+          cn="天翼空间"
+          enable="true"/>
+
+    <Item id="9122"
+          en=""
+          cn="联想应用商店"
+          enable="true"/>
+
+    <Item id="9123"
+          en=""
+          cn="安卓中国"
+          enable="true"/>
+
+    <Item id="9124"
+          en=""
+          cn="优亿市场"
+          enable="true"/>
+
+    <Item id="9125"
+          en=""
+          cn="三星软件商店"
+          enable="true"/>
+
+    <Item id="9126"
+          en=""
+          cn="爱卓市场"
+          enable="true"/>
+
+    <Item id="9127"
+          en=""
+          cn="爱米软件商店"
+          enable="true"/>
+
+    <Item id="9128"
+          en=""
+          cn="开奇商店"
+          enable="true"/>
+
+    <Item id="9129"
+          en="App Store Connect"
+          cn="App Store Connect"
+          enable="true"/>
+
+    <Item id="9130"
+          en=""
+          cn="安丰下载"
+          enable="true"/>
+
+    <Item id="9131"
+          en=""
+          cn="我要搜 App"
+          enable="true"/>
+
+    <Item id="9132"
+          en=""
+          cn="极游网"
+          enable="true"/>
+
+    <Item id="9133"
+          en=""
+          cn="安机网"
+          enable="true"/>
+
+    <Item id="9134"
+          en=""
+          cn="十字猫"
+          enable="true"/>
+
+    <Item id="9135"
+          en=""
+          cn="百度开放平台"
+          enable="true"/>
+
+    <Item id="9136"
+          en=""
+          cn="360 开放平台"
+          enable="true"/>
+
+    <Item id="9137"
+          en=""
+          cn="腾讯手机应用平台"
+          enable="true"/>
+
+    <Item id="9138"
+          en=""
+          cn="腾讯开放平台"
+          enable="true"/>
+
+    <Item id="9139"
+          en=""
+          cn="soso 开放平台"
+          enable="true"/>
+
+    <Item id="9140"
+          en=""
+          cn="Q+开放平台"
+          enable="true"/>
+
+    <Item id="9141"
+          en=""
+          cn="豌豆荚"
+          enable="true"/>
+
+    <Item id="9142"
+          en="gaojun"
+          cn="gaojun"
+          enable="true"/>
+    -->
+
+</ChannelInfo>

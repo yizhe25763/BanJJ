@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/jquery.kwicks.min.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>扮家家</title>
+</head>
+<body onload="ready()">
+    <div class="home-page">
+        <div class="todo animated zoomIn" data-wow-delay="0.5s"><img src="./images/teacher_todo.png" alt="老师上门做什么？"></div>
+        <div class="slogan animated zoomInDown" data-wow-delay="1s"><img src="./images/home_slogan.png" alt=""></div>
+        <div class="arrow-top">
+            <span class="top1"></span>
+            <span class="top2"></span>
+        </div>
+    </div>
+    <div class="age-nav">
+        <div class="age-bar"><img src="./images/age1.jpg" alt=""></div>
+        <div class="age-bar"><img src="./images/age2.jpg" alt=""></div>
+        <div class="age-bar"><img src="./images/age3.jpg" alt=""></div>
+        <div class="age-bar"><img src="./images/age4.jpg" alt=""></div>
+    </div>
+    <ul class="bxslider">
+    	<li class="page1">
+    		<div class="page"><img src="./images/page1.jpg" alt=""></div>
+    	</li>
+    	<li class="page2">
+    		<div class="page"><img src="./images/page2.jpg" alt=""></div>
+    	</li>
+    	<li class="page3">
+    		<div class="page"><img src="./images/page3.jpg" alt=""></div>
+    	</li>
+    	<li class="page4">
+    		<div class="page"><img src="./images/page4.jpg" alt=""></div>
+    	</li>
+    </ul>
+    <div id="order-btn"><a href="javascript:void(0);" onclick="window.bjj.huoDongClicked(1,'','','','',0,0,'','')">立即预约</a></div>
+    <div id="loading"><div class="loader"></div></div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.bxslider.min.js"></script>
+    <script src="./js/global.js"></script>
+    <script>
+    $('.bxslider').bxSlider({
+    	mode: 'horizontal',
+    	auto: false,
+    	pager: false,
+    	infiniteLoop: false,
+    	captions: true,
+    	prevText: '',
+    	nextText: '',
+    	touchEnabled: false,
+        adaptiveHeight: true,
+    	onSlideAfter: function($slideElement, oldIndex, newIndex) {
+    		var deviceHeight = $(window).height();
+    		$('html, body').animate({ scrollTop: deviceHeight }, 500);
+    		var newSlider = $('.bxslider li').eq(newIndex);
+            $('.age-bar').eq(newIndex).show().siblings().hide();
+    	}
+    })
+    </script>
+</body>
+</html>

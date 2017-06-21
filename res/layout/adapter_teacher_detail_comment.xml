@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.shzy.bjj.view.CircularImage
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/size_dip_55"
+            android:layout_height="@dimen/size_dip_55"
+            android:layout_marginLeft="@dimen/size_dip_5"
+            android:layout_marginTop="@dimen/size_dip_10"
+            android:background="@drawable/mine_head_img" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_dip_10"
+            android:layout_toRightOf="@id/iv_avatar"
+            android:paddingLeft="@dimen/size_dip_10"
+            android:textColor="#b0b0b0"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/phone"
+            style="@style/text_order_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/name"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/size_dip_5"
+            android:textColor="#b0b0b0"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            style="@style/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_dip_23"
+            android:layout_alignBottom="@id/teacher_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/size_dip_10"
+            android:layout_marginLeft="@dimen/size_dip_10"
+            android:layout_marginRight="@dimen/size_dip_10"
+            android:layout_marginTop="@dimen/size_dip_5"
+            android:layout_toRightOf="@id/teacher_name"
+            android:numStars="5"
+            android:onClick="false"
+            android:paddingTop="@dimen/size_dip_10"
+            android:stepSize="1" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/name"
+            android:layout_below="@id/name"
+            android:layout_marginRight="@dimen/size_dip_10"
+            android:layout_marginTop="@dimen/size_dip_12"
+            android:paddingLeft="@dimen/size_dip_10"
+            android:textColor="#4e4e4e"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <com.shzy.bjj.tools.photo.NoScrollGridView
+        android:id="@+id/gridview"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_dip_65"
+        android:layout_marginTop="3dp"
+        android:numColumns="3"
+        android:verticalSpacing="2.5dp" />
+
+    <com.shzy.bjj.tools.photo.NoScrollGridView
+        android:id="@+id/gridview_two"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_dip_65"
+        android:layout_marginTop="3dp"
+        android:numColumns="2"
+        android:verticalSpacing="2.5dp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="@dimen/size_dip_15"
+        android:paddingLeft="@dimen/size_dip_10"
+        android:textColor="#b0b0b0"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_dip_1"
+        android:background="@drawable/mine_line" />
+
+</LinearLayout>

@@ -1,0 +1,207 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eaeaea"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_action"
+        style="@style/style_action_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_dip_45"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/action_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_dip_10"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/size_dip_10"
+            android:src="@drawable/teacher_location" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_dip_5"
+            android:layout_toRightOf="@id/action_back"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/action_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="start"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/action_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_dip_10"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/action_fav"
+            android:layout_width="@dimen/size_dip_25"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/size_dip_10"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/action_share"
+            android:layout_width="@dimen/size_dip_25"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/size_dip_20"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_dip_50"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/area_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/size_dip_12"
+            android:layout_marginTop="@dimen/size_dip_12"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/area"
+                style="@style/text_order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teacher_area"
+                android:textColor="@drawable/teacher_selector" />
+
+            <ImageView
+                android:id="@+id/area_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_dip_5"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/tech_pic_techarrow_down" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/size_dip_1"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/size_dip_12"
+            android:layout_marginTop="@dimen/size_dip_12"
+            android:background="@drawable/dialog_line_v" />
+
+        <LinearLayout
+            android:id="@+id/date_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/size_dip_12"
+            android:layout_marginTop="@dimen/size_dip_12"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/date"
+                style="@style/text_order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teacher_date"
+                android:textColor="@drawable/teacher_selector" />
+
+            <ImageView
+                android:id="@+id/date_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_dip_5"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/tech_pic_techarrow_down" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/size_dip_1"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/size_dip_12"
+            android:layout_marginTop="@dimen/size_dip_12"
+            android:background="@drawable/dialog_line_v" />
+
+        <LinearLayout
+            android:id="@+id/skill_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/size_dip_12"
+            android:layout_marginTop="@dimen/size_dip_12"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/skill"
+                style="@style/text_order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teacher_skill"
+                android:textColor="@drawable/teacher_selector" />
+
+            <ImageView
+                android:id="@+id/skill_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_dip_5"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/tech_pic_techarrow_down" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_dip_2"
+        android:background="#d4d4d4" />
+
+    <include layout="@layout/loading" />
+
+    <include
+        android:id="@+id/no_message"
+        layout="@layout/no_meaage"
+        android:visibility="gone" />
+
+    <com.shzy.bjj.view.XListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:listSelector="@color/full_transparent"
+        android:scrollbars="none"
+        android:scrollingCache="false" >
+    </com.shzy.bjj.view.XListView>
+
+</LinearLayout>

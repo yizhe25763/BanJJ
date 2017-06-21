@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/order_background" >
+
+    <include
+        android:id="@+id/titles"
+        layout="@layout/common_title" />
+    <!-- 底部确认按钮 -->
+
+    <include
+        android:id="@+id/loading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titles"
+        layout="@layout/loading" />
+
+    <!-- 信息选择 -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loading"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1" >
+
+                <TableRow
+                    android:id="@+id/order_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_45"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_weight="1"
+                        android:text="@string/home_pay_address_title"
+                        android:textColor="@color/pay_title" />
+
+                    <TextView
+                        android:id="@+id/address_content"
+                        style="@style/text_mine"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_weight="5"
+                        android:ellipsize="end"
+                        android:singleLine="true" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_dip_25"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_marginRight="@dimen/size_dip_20"
+                        android:layout_marginTop="@dimen/size_dip_25"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <TableRow
+                    android:id="@+id/order_baby"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_45"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_weight="1"
+                        android:text="@string/home_pay_baby_title"
+                        android:textColor="@color/pay_title" />
+
+                    <TextView
+                        android:id="@+id/babay_content"
+                        style="@style/text_mine"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_weight="5"
+                        android:ellipsize="end"
+                        android:singleLine="true" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_dip_25"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_marginRight="@dimen/size_dip_20"
+                        android:layout_marginTop="@dimen/size_dip_25"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+                <!-- 头像 -->
+
+                <HorizontalScrollView
+                    android:id="@+id/order_time_gallery_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="110dp"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent" >
+
+                        <GridView
+                            android:id="@+id/order_time_gallery"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:numColumns="auto_fit"
+                            android:scrollbars="none"
+                            android:stretchMode="spacingWidthUniform" >
+                        </GridView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!--  -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/mine_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:background="#f7f7f7"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:text="付款信息:"
+                        android:textColor="@color/tab_selected" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <TableRow
+                    android:id="@+id/coupon_money"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_45"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_weight="2"
+                        android:text="代金券"
+                        android:textColor="@color/tab_selected" />
+
+                    <TextView
+                        android:id="@+id/voucher"
+                        style="@style/text_mine"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_weight="5"
+                        android:gravity="right"
+                        android:text="未使用"
+                        android:textColor="#b3b3b3" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_dip_25"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_marginRight="@dimen/size_dip_20"
+                        android:layout_marginTop="@dimen/size_dip_25"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_45"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_weight="2"
+                        android:text="可用积分"
+                        android:textColor="@color/tab_selected"
+                        android:visibility="gone" />
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_weight="5"
+                        android:gravity="right"
+                        android:text="2000积分可抵用20"
+                        android:textColor="#ffae00" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_dip_25"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_marginRight="@dimen/size_dip_20"
+                        android:layout_marginTop="@dimen/size_dip_25"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#f7f7f7"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:text="确认金额:"
+                        android:textColor="@color/tab_selected" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+                <!--  -->
+
+                <LinearLayout
+                    android:id="@+id/ali_pay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_65"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15" >
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="服务金额" />
+
+                    <TextView
+                        android:id="@+id/total_price"
+                        style="@style/text_mine"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="#ff1414" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+                <!--  -->
+
+                <LinearLayout
+                    android:id="@+id/voucher_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_65"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="代金券抵用" />
+
+                    <TextView
+                        android:id="@+id/voucher_content"
+                        style="@style/text_mine"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="600"
+                        android:textColor="#203fff" />
+                </LinearLayout>
+                <!--  -->
+
+                <View
+                    android:id="@+id/voucher_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line"
+                    android:visibility="gone" />
+
+                <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_dip_20"
+                    android:layout_marginTop="15dp"
+                    layout="@layout/layout_pay" />
+            </TableLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottom_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="72dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/order_bottom_background" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <Button
+                    android:id="@+id/order_ok_btn"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/choose_selector"
+                    android:text="@string/home_order_comment_btn"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/order_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/order_ok_btn"
+                    android:layout_alignTop="@id/order_ok_btn"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@id/order_ok_btn"
+                    android:gravity="center_vertical"
+                    android:textColor="#ff3918"
+                    android:textSize="@dimen/size_dip_19" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

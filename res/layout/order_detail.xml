@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <include layout="@layout/loading" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/id_swipe_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/size_dip_15" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_50"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="@dimen/size_dip_3"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/size_dip_10"
+                        android:layout_marginTop="@dimen/size_dip_10"
+                        android:background="#f75e53" />
+
+                    <TextView
+                        android:id="@+id/order_status"
+                        style="@style/text_order_value_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/size_dip_10"
+                        android:textColor="#3b3b3b" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15" >
+
+                    <TextView
+                        style="@style/text_order_title_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_title_number" />
+
+                    <TextView
+                        android:id="@+id/order_number"
+                        style="@style/text_order_value_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15" >
+
+                    <TextView
+                        style="@style/text_order_title_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_service" />
+
+                    <TextView
+                        android:id="@+id/order_name"
+                        style="@style/text_order_value_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#6fce01" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <LinearLayout
+                    android:id="@+id/mine_detail_baby_pic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15" >
+
+                    <TextView
+                        style="@style/text_order_title_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_teacher" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_dip_10"
+                        android:layout_marginTop="@dimen/size_dip_10"
+                        android:gravity="center_horizontal" >
+
+                        <com.shzy.bjj.view.CircularImage
+                            android:id="@+id/head_img"
+                            android:layout_width="@dimen/size_dip_65"
+                            android:layout_height="@dimen/size_dip_65"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/size_dip_5"
+                            android:background="@drawable/mine_head_img_baby" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/size_dip_10"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/size_dip_5"
+                        android:paddingTop="@dimen/size_dip_5" >
+
+                        <TextView
+                            android:id="@+id/teacher_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/size_dip_5"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <RatingBar
+                            android:id="@+id/ratingbar"
+                            style="@style/ratingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/size_dip_23"
+                            android:layout_alignBottom="@id/teacher_name"
+                            android:layout_marginBottom="@dimen/size_dip_5"
+                            android:layout_marginLeft="@dimen/size_dip_10"
+                            android:layout_toRightOf="@id/teacher_name"
+                            android:numStars="5"
+                            android:onClick="false"
+                            android:paddingTop="@dimen/size_dip_8"
+                            android:rating="0"
+                            android:stepSize="0.1" />
+
+                        <TextView
+                            android:id="@+id/teacher_order_total_title"
+                            style="@style/text_order_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/teacher_name"
+                            android:layout_marginTop="@dimen/size_dip_3"
+                            android:text="@string/order_teacher_order_total"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/teacher_order_total"
+                            style="@style/text_order_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/teacher_order_total_title"
+                            android:layout_toRightOf="@id/teacher_order_total_title" />
+
+                        <TextView
+                            android:id="@+id/teacher_skill_title"
+                            style="@style/text_order_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/teacher_order_total_title"
+                            android:layout_marginTop="@dimen/size_dip_3"
+                            android:text="@string/order_teacher_skill"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/teacher_skill"
+                            style="@style/text_order_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/teacher_skill_title"
+                            android:layout_toRightOf="@id/teacher_skill_title"
+                            android:singleLine="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15" >
+
+                    <TextView
+                        style="@style/text_order_title_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_title_shijian" />
+
+                    <TextView
+                        android:id="@+id/order_date"
+                        style="@style/text_order_value_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/size_dip_5" />
+
+                    <TextView
+                        style="@style/text_order_value_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_all" />
+
+                    <TextView
+                        android:id="@+id/order_time_total"
+                        style="@style/text_order_value_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15" >
+
+                    <TextView
+                        style="@style/text_order_title_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_baby" />
+
+                    <TextView
+                        android:id="@+id/order_baby"
+                        style="@style/text_order_value_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15" >
+
+                    <TextView
+                        style="@style/text_order_title_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_address" />
+
+                    <TextView
+                        android:id="@+id/order_address"
+                        style="@style/text_order_value_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15" >
+
+                    <TextView
+                        style="@style/text_order_title_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_phone" />
+
+                    <EditText
+                        android:id="@+id/order_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:inputType="phone"
+                        android:singleLine="true" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15" >
+
+                    <TextView
+                        style="@style/text_order_title_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_more_contact" />
+
+                    <TextView
+                        android:id="@+id/order_more_contact"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/order_phone_hit"
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:textColorHint="#96c2ff"
+                        android:textSize="@dimen/size_dip_16" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15" >
+
+                    <TextView
+                        style="@style/text_order_title_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_memo" />
+
+                    <TextView
+                        android:id="@+id/order_memo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/noway"
+                        android:textColorHint="#cecece" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_12"
+                    android:background="#eaeaea"
+                    android:visibility="gone" />
+
+                <TextView
+                    style="@style/text_order_value_detail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_50"
+                    android:background="#f7f7f7"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15"
+                    android:text="@string/order_pay_info"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/text_order_value_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/order_all_price" />
+
+                    <TextView
+                        android:id="@+id/order_all_price"
+                        style="@style/text_order_value_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="#ff1414" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/text_order_value_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/order_discount" />
+
+                    <TextView
+                        android:id="@+id/order_discount"
+                        style="@style/text_order_value_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="#203fff" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_60"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/text_order_value_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_pay" />
+
+                    <TextView
+                        android:id="@+id/order_pay"
+                        style="@style/text_order_value_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_5"
+                        android:textColor="#ff1414" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_12"
+                    android:background="#eaeaea"
+                    android:visibility="gone" />
+
+                <include
+                    layout="@layout/layout_pay"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:layout_marginLeft="@dimen/size_dip_15"
+                    android:layout_marginRight="@dimen/size_dip_15"
+                    android:background="@drawable/mine_line"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/text_order_value_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/order_user_date" />
+
+                    <TextView
+                        android:id="@+id/order_user_date"
+                        style="@style/text_order_value_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_75"
+                    android:background="#eaeaea"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/size_dip_5"
+                    android:paddingLeft="@dimen/size_dip_15"
+                    android:paddingRight="@dimen/size_dip_15"
+                    android:visibility="gone" >
+
+                    <ImageButton
+                        android:id="@+id/order_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/order_cancel"
+                        android:contentDescription="@string/app_name" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/config_hidden"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

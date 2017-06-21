@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/order_status_payed_bg"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_dip_15"
+        android:background="#eaeaea" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/size_dip_10" >
+
+        <TextView
+            android:id="@+id/order_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/size_dip_10"
+            android:paddingTop="@dimen/size_dip_5"
+            android:text="@string/app_name"
+            android:textColor="@color/tab_selected"
+            android:textSize="20sp" />
+
+        <com.shzy.bjj.view.CustomListView
+            android:id="@+id/listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/line_img"
+            android:drawSelectorOnTop="false"
+            android:fadingEdge="none"
+            android:scrollbars="none"
+            android:scrollingCache="false" />
+
+        <RelativeLayout
+            android:id="@+id/payLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#f7f7f7" >
+
+            <Button
+                android:id="@+id/payBt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/size_dip_10"
+                android:layout_marginLeft="@dimen/size_dip_5"
+                android:layout_marginRight="@dimen/size_dip_5"
+                android:layout_marginTop="@dimen/size_dip_10"
+                android:background="@drawable/order_gopay" />
+
+            <TextView
+                android:id="@+id/price_hint"
+                style="@style/text_order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/size_dip_5"
+                android:text="@string/price_pay"
+                android:textSize="@dimen/size_dip_15" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/payBt"
+                android:layout_alignTop="@id/price_hint"
+                android:layout_toLeftOf="@id/payBt"
+                android:layout_toRightOf="@id/price_hint"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/order_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ff1414"
+                    android:textSize="@dimen/size_dip_14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cancelBt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_dip_5"
+                    android:gravity="center"
+                    android:text="@string/order_cancel"
+                    android:textColor="@drawable/cannel_appoinment_color_selector"
+                    android:textSize="@dimen/size_dip_14"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

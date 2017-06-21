@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eaeaea"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_dip_6"
+        android:layout_marginLeft="@dimen/size_dip_8"
+        android:layout_marginRight="@dimen/size_dip_8"
+        android:layout_marginTop="@dimen/size_dip_5"
+        android:background="@drawable/teacher_item_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/size_dip_10"
+            android:layout_marginLeft="@dimen/size_dip_5"
+            android:layout_marginTop="@dimen/size_dip_10"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_dip_10"
+                android:layout_marginTop="@dimen/size_dip_10"
+                android:gravity="center_horizontal" >
+
+                <com.shzy.bjj.view.CircularImage
+                    android:id="@+id/head_img"
+                    android:layout_width="@dimen/size_dip_55"
+                    android:layout_height="@dimen/size_dip_55"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/size_dip_5"
+                    android:background="@drawable/mine_head_img_baby" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size_dip_5"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/teacher_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/size_dip_5"
+                    android:text="1111111"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_dip_18" />
+
+                <RatingBar
+                    android:id="@+id/ratingbar"
+                    style="@style/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_dip_23"
+                    android:layout_alignBottom="@id/teacher_name"
+                    android:layout_marginBottom="@dimen/size_dip_5"
+                    android:layout_marginLeft="@dimen/size_dip_2"
+                    android:layout_toRightOf="@id/teacher_name"
+                    android:numStars="5"
+                    android:onClick="false"
+                    android:paddingTop="@dimen/size_dip_10"
+                    android:rating="3"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/teacher_order_has"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/ratingbar"
+                    android:layout_marginLeft="@dimen/size_dip_1"
+                    android:layout_marginTop="@dimen/size_dip_5"
+                    android:layout_toRightOf="@id/ratingbar"
+                    android:background="@drawable/tech_pic_yxg"
+                    android:contentDescription="@string/app_name" />
+                <!-- android:background="@drawable/tech_pic_yxg" -->
+
+
+                <!-- android:background="@drawable/tech_pic_ygz" -->
+
+                <ImageView
+                    android:id="@+id/teacher_order_focus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/teacher_order_has"
+                    android:layout_marginLeft="@dimen/size_dip_1"
+                    android:layout_marginTop="@dimen/size_dip_5"
+                    android:layout_toRightOf="@id/teacher_order_has"
+                    android:background="@drawable/tech_pic_ygz"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/teacher_skill_title"
+                    style="@style/text_order_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/teacher_name"
+                    android:layout_marginTop="@dimen/size_dip_5"
+                    android:text="@string/order_teacher_skill" />
+
+                <TextView
+                    android:id="@+id/teacher_skill"
+                    style="@style/text_order_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/teacher_skill_title"
+                    android:layout_toRightOf="@id/teacher_skill_title"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    style="@style/text_order_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/teacher_skill_title"
+                    android:layout_marginTop="@dimen/size_dip_3"
+                    android:singleLine="true"
+                    android:text="ggeygyu" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/size_dip_1"
+            android:background="#e8e8e8" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/size_dip_55"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/size_dip_5"
+            android:paddingLeft="@dimen/size_dip_15"
+            android:paddingRight="@dimen/size_dip_20"
+            android:paddingTop="@dimen/size_dip_5" >
+
+            <TextView
+                style="@style/text_order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teacher_order_number"
+                android:textColor="#c3c3c3" />
+
+            <TextView
+                android:id="@+id/teacher_order_number"
+                style="@style/text_order_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#c3c3c3" />
+
+            <View
+                android:layout_width="@dimen/size_dip_1"
+                android:layout_height="fill_parent"
+                android:background="#cececd" />
+
+            <TextView
+                android:id="@+id/choose"
+                style="@style/text_order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/size_dip_5"
+                android:paddingLeft="@dimen/size_dip_20"
+                android:paddingRight="@dimen/size_dip_20"
+                android:paddingTop="@dimen/size_dip_5"
+                android:text="@string/teacher_choose"
+                android:textColor="@drawable/rightnow_appoinment_selector"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

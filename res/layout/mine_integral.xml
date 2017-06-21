@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeaea"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <include layout="@layout/loading" />
+    <include
+        android:id="@+id/no_message"
+        android:visibility="gone"
+        layout="@layout/no_meaage" />
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/mine_detail_baby"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/size_dip_55"
+            android:background="#f7f7f7"
+            android:gravity="center_vertical"
+            android:padding="@dimen/size_dip_10" >
+
+            <TextView
+                style="@style/text_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_dip_10"
+                android:text="@string/integral_count"
+                android:textColor="@color/text_integral_color" />
+
+            <TextView
+                android:id="@+id/integral_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/voucher_txt_asc" />
+        </LinearLayout>
+
+        <include layout="@layout/listview" />
+    </LinearLayout>
+
+</LinearLayout>

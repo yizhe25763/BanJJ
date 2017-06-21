@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/order_background" >
+
+    <include
+        android:id="@+id/user_title"
+        layout="@layout/common_title" />
+
+    <include
+        android:id="@+id/loading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_title"
+        layout="@layout/loading" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loading"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 信息选择 -->
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="2" >
+
+                <TableRow
+                    android:id="@+id/order_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_45"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_20"
+                        android:background="@drawable/order_address_title" />
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:text="@string/home_order_address_title"
+                        android:textColor="@color/appoinment_address" />
+
+                    <TextView
+                        android:id="@+id/address_content"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="right|center_horizontal"
+                        android:paddingRight="15dp"
+                        android:singleLine="true"
+                        android:textColor="#ff6600" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_dip_25"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_marginRight="@dimen/size_dip_20"
+                        android:layout_marginTop="@dimen/size_dip_25"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <TableRow
+                    android:id="@+id/order_baby"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_45"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_20"
+                        android:background="@drawable/order_baby_title" />
+
+                    <TextView
+                        style="@style/text_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:text="@string/home_order_baby_title"
+                        android:textColor="@color/appoinment_address" />
+
+                    <TextView
+                        android:id="@+id/baby_content"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|right"
+                        android:paddingRight="15dp"
+                        android:singleLine="true"
+                        android:textColor="#ff6600" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_dip_25"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_marginRight="@dimen/size_dip_20"
+                        android:layout_marginTop="@dimen/size_dip_25"
+                        android:background="@drawable/mine_pic_arrow"
+                        android:contentDescription="@string/app_name" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <!--  -->
+
+                <RelativeLayout
+                    android:id="@+id/ali_pay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_65"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/size_dip_20"
+                    android:paddingRight="@dimen/size_dip_15" >
+
+                    <ImageView
+                        android:id="@+id/switch_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="@dimen/size_dip_15"
+                        android:layout_marginTop="@dimen/size_dip_15"
+                        android:background="@drawable/order_teacher_title"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/switch_txt"
+                        style="@style/text_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/size_dip_15"
+                        android:layout_toRightOf="@id/switch_img"
+                        android:text="@string/home_order_teacher_title"
+                        android:textColor="@color/appoinment_address" />
+
+                    <ImageView
+                        android:id="@+id/switch_help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/size_dip_10"
+                        android:layout_toRightOf="@id/switch_txt"
+                        android:background="@drawable/appoinment_desc_selector"
+                        android:contentDescription="@string/app_name" />
+
+                    <com.shzy.bjj.view.Switch
+                        android:id="@+id/switch_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+                <!--  -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <include layout="@layout/teacher_condition_dialog_date" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/appoinment_time_sale"
+                    android:textColor="@color/appoinment_address" />
+                <!-- 备注 -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <EditText
+                        android:id="@+id/order_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#fbfbfb"
+                        android:gravity="left|top"
+                        android:hint="@string/user_input_hint"
+                        android:maxLength="140"
+                        android:maxLines="6"
+                        android:minLines="6"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#cecece"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/order_num_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/text_nums"
+                        android:textColor="#ff7373" />
+                </RelativeLayout>
+                <!-- 注意事项 -->
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_dip_20"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/white"
+                    android:lineSpacingMultiplier="1.4"
+                    android:paddingBottom="@dimen/size_dip_20"
+                    android:paddingLeft="@dimen/size_dip_20"
+                    android:paddingTop="@dimen/size_dip_20"
+                    android:text="@string/order_content"
+                    android:textSize="15sp" />
+            </TableLayout>
+
+            <!-- 日历 -->
+
+            <RelativeLayout
+                android:id="@+id/bottom_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="72dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/order_bottom_background" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_dip_1"
+                    android:background="@drawable/mine_line" />
+
+                <Button
+                    android:id="@+id/order_ok_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/button_green_selector"
+                    android:text="@string/home_order_ok_btn"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/order_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/order_ok_btn"
+                    android:layout_alignTop="@id/order_ok_btn"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@id/order_ok_btn"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/appoinment_nums" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!-- 底部确认按钮 -->
+
+</RelativeLayout>

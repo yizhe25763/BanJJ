@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/text_order_value_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_dip_50"
+        android:background="#f7f7f7"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/size_dip_15"
+        android:paddingRight="@dimen/size_dip_15"
+        android:text="@string/order_pay_tool" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_dip_1"
+        android:background="@drawable/mine_line" />
+
+    <LinearLayout
+        android:id="@+id/ali_pay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/size_dip_15"
+        android:paddingRight="@dimen/size_dip_15" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_dip_15"
+            android:layout_marginTop="@dimen/size_dip_15"
+            android:background="@drawable/yy_pic_zfb"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            style="@style/text_order_value_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/size_dip_10"
+            android:text="@string/order_pay_alipay"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/ali_pay_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/order_pay_tool"
+            android:contentDescription="@string/app_name" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/size_dip_1"
+        android:layout_marginLeft="@dimen/size_dip_15"
+        android:layout_marginRight="@dimen/size_dip_15"
+        android:background="@drawable/mine_line" />
+
+    <LinearLayout
+        android:id="@+id/weixin_pay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/size_dip_15"
+        android:paddingRight="@dimen/size_dip_15" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_dip_15"
+            android:layout_marginTop="@dimen/size_dip_15"
+            android:background="@drawable/yy_pic_wx"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            style="@style/text_order_value_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/size_dip_10"
+            android:text="@string/order_pay_weixin"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/weixin_pay_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/order_pay_tool"
+            android:contentDescription="@string/app_name" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="loding">加载中...</string>
+    <string name="toast_name_empty">用户姓名不能为空！</string>
+    <string name="toast_photo_empty">用户头像不能为空！</string>
+    <string name="toast_phone_empty">手机号码不能为空！</string>
+    <string name="toast_identy_empty">身份证号不能为空！</string>
+    <string name="toast_phone_format">手机号码格式不正确！</string>
+    <string name="toast_identy_format">身份证号格式不正确！</string>
+     <string name="toast_baby_name_empty">宝宝昵称不能为空！</string>
+    <string name="toast_baby_birth_empty">宝宝生日不能为空！</string>
+    <string name="toast_baby_create">创建宝宝信息成功！</string>
+    <string name="toast_baby_update">修改宝宝信息成功！</string>
+    <string name="toast_baby_delete">删除宝宝信息成功！</string>
+    <string name="toast_address_empty">地址不能为空！</string>
+        <string name="toast_address_info_empty">门牌号不能为空！</string>
+    
+    <string name="toast_appointment_set_default">设置默认地址成功！</string>
+    <string name="toast_relogin">你的账号已在其他设备登录，请重新登录！</string>
+    <string name="toast_skill_two">擅长选择不能超过2项！</string>
+    <string name="toast_delete_baby">您确认要删除宝宝信息吗？</string>
+    <string name="toast_delete_order">您确认要取消该订单吗？</string>
+
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loading"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="horizontal"
+    android:visibility="gone"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <com.shzy.bjj.view.CircularProgress
+        android:layout_width="@dimen/progress_height"
+        android:layout_height="@dimen/progress_height"
+        android:layout_margin="5dp"
+        app:borderWidth="@dimen/size_dip_2" />
+
+    <TextView
+        android:id="@+id/lodingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loding" />
+
+</LinearLayout>
